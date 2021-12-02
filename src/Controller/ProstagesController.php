@@ -17,4 +17,35 @@ class ProstagesController extends AbstractController
             'controller_name' => 'ProstagesController',
         ]);
     }
+
+    /**
+     * @Route("/entreprises", name="prostages_entreprises")
+     */
+    public function affEntreprises(): Response
+    {
+        return $this->render('prostages/entreprises.html.twig', [
+            'controller_name' => 'Controleur prostages entreprises',
+        ]);
+    }
+
+    /**
+     * @Route("/formation", name="prostages_formation")
+     */
+    public function affFormation(): Response
+    {
+        return $this->render('prostages/formations.html.twig', [
+            'controller_name' => 'Controleur prostages formation',
+        ]);
+    }
+
+    /**
+     * @Route("/stages/{id}", name="prostages_stages")
+     */
+    public function affStages($id): Response
+    {
+        return $this->render('prostages/stages.html.twig', [
+            'controller_name' => 'Controleur prostages stages', 
+            ['idRessource' => $id ]
+        ]);
+    }
 }
