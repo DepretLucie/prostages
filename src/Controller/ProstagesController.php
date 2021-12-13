@@ -45,7 +45,7 @@ class ProstagesController extends AbstractController
     {
         return $this->render('prostages/stages.html.twig', [
             'controller_name' => 'Controleur prostages stages', 
-            ['idRessource' => $id ]
+            'id' => $id,
         ]);
     }
 }
