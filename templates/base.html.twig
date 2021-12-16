@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}ProStages{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
@@ -14,6 +14,20 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block titre %}
+            <h1>ProStages</h1>
+        {% endblock %}
+
+        {% block menu %}
+            <h1>---MENU---</h1>
+        {% endblock %}
+
+        {% block contenu %}
+            <h1>---CONTENU---</h1>
+        {% endblock %}
+
+        {% block footer %}
+            <h1>---FOOTER---</h1>
+        {% endblock %}
     </body>
 </html>
