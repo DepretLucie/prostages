@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2021 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="filtre" unicode="&#xf0b0;" d="M783 685q9-22-8-39l-275-275v-414q0-23-22-33-7-3-14-3-15 0-25 11l-143 143q-10 11-10 25v271l-275 275q-18 17-8 39 9 22 33 22h714q23 0 33-22z" horiz-adv-x="785.7" />
+
+<glyph glyph-name="copyright" unicode="&#xf1f9;" d="M642 251v-61q0-28-21-50t-52-34-66-18-65-6q-115 0-192 78t-76 193q0 113 76 189t189 76q19 0 42-3t52-10 51-19 39-31 16-45v-61q0-9-9-9h-66q-9 0-9 9v39q0 24-37 38t-76 13q-79 0-128-51t-49-132q0-85 51-140t130-55q38 0 77 14t39 37v39q0 4 3 6t5 3h67q3 0 6-3t3-6z m-213 456q-73 0-139-28t-114-76-76-114-29-139 29-139 76-113 114-77 139-28 138 28 114 77 76 113 29 139-29 139-76 114-114 76-138 28z m428-357q0-117-57-215t-156-156-215-58-216 58-155 156-58 215 58 215 155 156 216 58 215-58 156-156 57-215z" horiz-adv-x="857.1" />
+</font>
+</defs>
+</svg>
