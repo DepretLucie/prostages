@@ -27,7 +27,7 @@
         <div class="row">
             <!-- BLOC TITRE DE LA PAGE -->
             {% block titre %}
-                <a href="{{path('prostages_accueil')}}"><img src={{asset('/logoProStages.png')}} alt="logo_ProStages" style="width:1200px; height:200px; margin:auto"/></a>
+                <a href="{{path('prostages_accueil')}}"><img src={{asset('/logoProStages.png')}} alt="logo_ProStages"/></a>
             {% endblock %}
         </div>
 
@@ -56,13 +56,13 @@
                 <!-- Creation premiere colonne -->
                 <div class="col-md-6 col-xs-12">
                     <i class="icon-filtre"></i>
-                    <a href="{{path('prostages_formation')}}">Filtrer par formation</a>
+                    <a href="{{path('prostages_formation')}}" style="color: #9b5c5c">Filtrer par formation</a>
                 </div>
 
                 <!-- Creation deuxieme colonne -->
                 <div class="col-md-6 col-xs-12">
                     <i class="icon-filtre"></i>
-                    <a href="{{path('prostages_entreprises')}}">Filtrer par entreprise</a>
+                    <a href="{{path('prostages_entreprises')}}" style="color: #9b5c5c">Filtrer par entreprise</a>
                 </div>
             {% endblock %}
         </div>
@@ -84,7 +84,7 @@
         </div>
 
         <!-- Creation cinquieme ligne -->
-        <div class="row" style="background-color: #080044; border: 2px solid #080044; color: white">
+        <div class="row" style="background-color: #080044; border: 2px solid #080044; color: white; position:absolute; width:69%; bottom:0">
             <!-- BLOC FOOTER DE LA PAGE -->
             {% block footer %}
                 <!-- Creation premiere colonne -->
@@ -101,6 +101,8 @@
                 <div class="col-md-2 offset-md-3 col-xs-12">
                     <p>Mentions légales</p>
                 </div>
+
+                <p>Site réalisé avec les frameworks <a href="https://symfony.com/" style="color: white">Symfony</a> et <a href="https://getbootstrap.com/" style="color: white">Bootstrap</p>
             {% endblock %}
         </div>
     </div>

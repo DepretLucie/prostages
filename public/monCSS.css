@@ -4,3 +4,18 @@
     line-height: 35px;
     border-radius: 6px;
 }
+
+.example-wrapper 
+{ 
+    margin: 1em auto; 
+    max-width: 800px; 
+    width: 95%; 
+    font: 18px/1.5 sans-serif; 
+}
+
+img
+{
+    width:1200px; 
+    height:215px; 
+    margin:auto;
+}
