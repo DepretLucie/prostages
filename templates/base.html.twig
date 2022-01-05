@@ -27,7 +27,7 @@
         <div class="row">
             <!-- BLOC TITRE DE LA PAGE -->
             {% block titre %}
-                <a href="{{path('prostages_accueil')}}"><img src={{asset('/logoProStages.png')}} alt="logo_ProStages"/></a>
+                <a href="{{path('prostages_accueil')}}"><img src={{asset('/logoProStages.png')}} style="width: 100%;" alt="logo_ProStages"/></a>
             {% endblock %}
         </div>
 
@@ -84,21 +84,21 @@
         </div>
 
         <!-- Creation cinquieme ligne -->
-        <div class="row" style="background-color: #080044; border: 2px solid #080044; color: white; position:absolute; width:69%; bottom:0">
+        <div class="row" style="background-color: #080044; border: 2px solid #080044; color: white; bottom:0">
             <!-- BLOC FOOTER DE LA PAGE -->
             {% block footer %}
                 <!-- Creation premiere colonne -->
-                <div class="col-md-2 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <p><i class="icon-copyright"></i>LucieHalloucherie</p>
                 </div>
 
                 <!-- Creation deuxieme colonne -->
-                <div class="col-md-2 offset-md-3 col-xs-12">
+                <div class="col-md-4 col-xs-12" style="text-align: center;">
                     <p>2022 | DUT Informatique</p>
                 </div>
 
                 <!-- Creation troisieme colonne -->
-                <div class="col-md-2 offset-md-3 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <p>Mentions légales</p>
                 </div>
 
