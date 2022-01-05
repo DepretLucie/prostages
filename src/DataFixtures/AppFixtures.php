@@ -56,11 +56,12 @@ class AppFixtures extends Fixture
         {
             $entreprise = new Entreprise();
             $entreprise->setNom($faker->company);
-            $entreprise->setAdresse($faker->adress);
+            $entreprise->setAdresse($faker->address);
             $entreprise->setActivite($faker->realText($maxNbChars = 50, $indexSize = 2));
             $entreprise->setSiteWeb($faker->url);
 
-            $entreprises[] = $entreprise;
+            // Création d'un tableau d'entreprises
+            $tableauDesEntreprises[] = $entreprise;
             $manager->persist($entreprise);
         }
 
@@ -70,10 +71,15 @@ class AppFixtures extends Fixture
         for($iS = 0; $iS < $nbrStages; $iS++)
         {
             $stage = new Stage();
-            $stage->setTitre($faker->sentence);
+            $stage->setTitre($faker->realText($maxNbChars = 100, $indexSize = 2));
             $stage->setMission($faker->paragraph(5, false));
             $stage->setEmail($faker->email);
-            $stage->setEntreprise();
+
+            $entrepriseVersStage = $faker->numberBetween($min = 0, $max = 17);
+            $stage->setEntreprise($tableauDesEntreprises[$entrepriseVersStage]);
+
+            $formationVersStage = $faker->numberBetween($min = 0, $max = 5);
+            $stage->addFormation($tableauDesFormations[$formationVersStage]);
 
             $manager->persist($stage);
         }
