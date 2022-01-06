@@ -71,8 +71,8 @@ class AppFixtures extends Fixture
         for($iS = 0; $iS < $nbrStages; $iS++)
         {
             $stage = new Stage();
-            $stage->setTitre($faker->realText($maxNbChars = 100, $indexSize = 2));
-            $stage->setMission($faker->paragraph(5, false));
+            $stage->setTitre($faker->realText($maxNbChars = 15, $indexSize = 2));
+            $stage->setMission($faker->realText($maxNbChars = 30, $indexSize = 2));
             $stage->setEmail($faker->email);
 
             $entrepriseVersStage = $faker->numberBetween($min = 0, $max = 17);

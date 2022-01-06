@@ -1,8 +1,54 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu %}
-<div class="example-wrapper">
-    <h1>Bienvenue sur la page d'accueil de Prostages</h1>
-    <p>Ce site vous permet de trouver un stage en filtrant vos attentes par catégories</p>
-</div>
+
+    <div class="example-wrapper">
+        <h1>Bienvenue sur la page d'accueil de Prostages</h1>
+        <p>Ce site vous permet de trouver un stage en filtrant vos attentes par catégories</p>
+        
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <td style="font-weight: bold;">TITRE</td>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12">
+                            <td style="font-weight: bold;">MISSION</td>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12">
+                            <td style="font-weight: bold;">EMAIL</td>
+                        </div>
+                    </div>
+                </tr>
+            </thead>
+        
+            {% for stageCourant in stages %}
+                <tbody>
+                    <tr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12">
+                                <td>{{ stageCourant.titre }}</td>
+                            </div>
+
+                            <div class="col-md-4 col-xs-12">
+                                <td>{{ stageCourant.mission }}</td>
+                            </div>
+
+                            <div class="col-md-4 col-xs-12">
+                                <td>{{ stageCourant.email }}</td>
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            {% endfor %}
+            
+        </table>
+
+    </div>
+
+    
+
 {% endblock %}

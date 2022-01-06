@@ -1,21 +1,20 @@
 [class=row]
 {
     text-align: center;
-    line-height: 35px;
+    line-height: 30px;
     border-radius: 6px;
 }
 
-.example-wrapper 
-{ 
-    margin: 1em auto; 
-    max-width: 800px; 
-    width: 95%; 
-    font: 18px/1.5 sans-serif; 
+.example-wrapper
+{
+    padding-left: 0%;
+    padding-right: 0%;
 }
+
 
 img
 {
-    width:1200px; 
-    height:215px; 
-    margin:auto;
+    width: 450px; 
+    height: 270px; 
+    margin: auto;
 }
