@@ -9,16 +9,12 @@
             <thead>
                 <tr>
                     <div class="row">
-                        <div class="col-md-4 col-xs-12">
+                        <div class="col-md-6 col-xs-12">
                             <td style="font-weight: bold;">TITRE</td>
                         </div>
 
-                        <div class="col-md-4 col-xs-12">
+                        <div class="col-md-6 col-xs-12">
                             <td style="font-weight: bold;">MISSION</td>
-                        </div>
-
-                        <div class="col-md-4 col-xs-12">
-                            <td style="font-weight: bold;">EMAIL</td>
                         </div>
                     </div>
                 </tr>
@@ -28,16 +24,12 @@
                     <tbody>
                         <tr>
                             <div class="row">
-                                <div class="col-md-4 col-xs-12">
+                                <div class="col-md-6 col-xs-12">
                                     <td><a href="{{path('prostages_stagesPourUneEntreprise', {idE:entreprise.id, idS:stageCourant.id})}}">{{ stageCourant.titre }}</a></td>
                                 </div>
 
-                                <div class="col-md-4 col-xs-12">
+                                <div class="col-md-6 col-xs-12">
                                     <td>{{ stageCourant.mission }}</td>
-                                </div>
-
-                                <div class="col-md-4 col-xs-12">
-                                    <td>{{ stageCourant.email }}</td>
                                 </div>
                             </div>
                         </tr>
