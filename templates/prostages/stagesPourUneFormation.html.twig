@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+
+    <div class="example-wrapper">
+        <h2 style="color: #080044; font-weight: bold;"> {{ unStage.titre}} </h2>
+        
+        <div class="card">
+            <h5 style="color: #080044; font-weight: bold;">Formation</h5>
+            {% for formationCourante in unStage.formations %}
+                <p>{{ formationCourante.nomLong }}</p>
+            {% endfor %}
+
+            <h5 style="color: #080044; font-weight: bold;">Entreprise</h5>
+            <p>{{ unStage.entreprise.nom }}</p>
+            <p>{{ unStage.entreprise.activite }}</p>
+
+            <h5 style="color: #080044; font-weight: bold;">Mission du stage</h5>
+            <p>{{ unStage.mission }}</p>
+
+            <h5 style="color: #080044; font-weight: bold;">Nos contacts</h5>
+            <p>{{ unStage.entreprise.siteweb }}</p>
+            <p>{{ unStage.email }}</p>
+        </div>
+    </div>
+
+{% endblock %}
