@@ -3,11 +3,50 @@
 {% block contenu %}
 
 <div class="example-wrapper">
-    <h1>Cette page affichera la liste des entreprises proposant un stage</h1>
-    <br><br>
-    {% for entrepriseCourante in entreprise %}
-    <a class="link" href="{{path('prostages_stagesParEntreprise', {'id': entrepriseCourante.id})}}">{{ entrepriseCourante.nom}}</a>
-    <br><br>
-    {% endfor %}
-</div>
+    <h2 style="color: #080044; font-weight: bold;">Bienvenue sur la page récapitulant toutes les entreprises</h2>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <td style="font-weight: bold;">NOM</td>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12">
+                            <td style="font-weight: bold;">ADRESSE</td>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12">
+                            <td style="font-weight: bold;">ACTIVITE</td>
+                        </div>
+                    </div>
+                </tr>
+            </thead>
+
+            {% for entrepriseCourante in entreprises %}
+                <tbody>
+                    <tr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12">
+                                <td><a href="{{path('prostages_stagesParEntreprise', {id:entrepriseCourante.id})}}">{{ entrepriseCourante.nom }}</a></td>
+                            </div>
+
+                            <div class="col-md-4 col-xs-12">
+                                <td>{{ entrepriseCourante.adresse }}</td>
+                            </div>
+
+                            <div class="col-md-4 col-xs-12">
+                                <td>{{ entrepriseCourante.activite }}</td>
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        
+        </table>
+    </div>
+
+    
+
 {% endblock %}

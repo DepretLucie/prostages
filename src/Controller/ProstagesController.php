@@ -31,9 +31,13 @@ class ProstagesController extends AbstractController
      */
     public function affEntreprises(): Response
     {
-        return $this->render('prostages/entreprises.html.twig', [
-            'controller_name' => 'Controleur prostages entreprises',
-        ]);
+        // Récupérer le respository de l'entité Stage
+        $repositoryEntreprise= $this->getDoctrine()->getRepository(Entreprise::class);
+
+        // Récupérer les stages enregistrés en BD
+        $entreprises = $repositoryEntreprise->findAll();
+
+        return $this->render('prostages/entreprises.html.twig', ['controller_name' => 'Controleur prostages entreprises', 'entreprises' => $entreprises,]);
     }
 
     /**
