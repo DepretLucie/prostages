@@ -1,18 +1,34 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
 <div class="example-wrapper">
-    <h1>Cette page affichera la liste des formations de l'IUT</h1>
+    <h2 style="color: #080044; font-weight: bold;">Bienvenue sur la page récapitulant toutes les formations</h2>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Temp/symfony/prostages/src/Controller/ProstagesController.php'|file_link(0) }}">src/Controller/ProstagesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Temp/symfony/prostages/templates/prostages/index.html.twig'|file_link(0) }}">templates/prostages/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <td style="font-weight: bold;">NOM</td>
+                        </div>
+                    </div>
+                </tr>
+            </thead>
+
+            {% for formationCourante in formations %}
+                <tbody>
+                    <tr>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-12">
+                                <td><a href="{{path('prostages_stagesParFormation', {id:formationCourante.id})}}">{{ formationCourante.nomCourt }}</a></td>
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        
+        </table>
+    </div>
+
 {% endblock %}

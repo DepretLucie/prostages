@@ -60,9 +60,13 @@ class ProstagesController extends AbstractController
      */
     public function affFormation(): Response
     {
-        return $this->render('prostages/formations.html.twig', [
-            'controller_name' => 'Controleur prostages formation',
-        ]);
+        // Récupérer le respository de l'entité Stage
+        $repositoryFormation = $this->getDoctrine()->getRepository(Formation::class);
+
+        // Récupérer les stages enregistrés en BD
+        $formations = $repositoryFormation->findAll();
+
+        return $this->render('prostages/formations.html.twig', ['controller_name' => 'Controleur prostages formation', 'formations' => $formations,]);
     }
 
     /**
