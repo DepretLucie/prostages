@@ -1,18 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Cette page affichera le descriptif du stage ayant pour identifiant {{ stage.id }}</h1>
+    <div class="example-wrapper">
+        <h2 style="color: #080044; font-weight: bold;"> {{ stage.titre}} </h2>
+        <div class="card">
+            <h5 style="color: #080044; font-weight: bold;">Formation</h5>
+            {% for formationCourante in stage.formations %}
+                <p>{{ formationCourante.nomLong }}</p>
+            {% endfor %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Temp/symfony/prostages/src/Controller/ProstagesController.php'|file_link(0) }}">src/Controller/ProstagesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Temp/symfony/prostages/templates/prostages/index.html.twig'|file_link(0) }}">templates/prostages/index.html.twig</a></code></li>
-    </ul>
-</div>
+            <h5 style="color: #080044; font-weight: bold;">Entreprise</h5>
+            <p>{{ stage.entreprise.nom }}</p>
+            <p>{{ stage.entreprise.activite }}</p>
+
+            <h5 style="color: #080044; font-weight: bold;">Mission du stage</h5>
+            <p>{{ stage.mission }}</p>
+
+            <h5 style="color: #080044; font-weight: bold;">Nos contacts</h5>
+            <p>{{ stage.entreprise.siteweb }}</p>
+            <p>{{ stage.email }}</p>
+        </div>
+    </div>
+
 {% endblock %}
