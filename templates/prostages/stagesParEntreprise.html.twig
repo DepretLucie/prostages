@@ -20,21 +20,33 @@
                 </tr>
             </thead>
             {% for stageCourant in entreprise.stages %}
-                {% for formationCourante in stageCourant.formations %}
-                    <tbody>
-                        <tr>
-                            <div class="row">
-                                <div class="col-md-6 col-xs-12">
-                                    <td><a href="{{path('prostages_stagesPourUneEntreprise', {idE:entreprise.id, idS:stageCourant.id})}}">{{ stageCourant.titre }}</a></td>
-                                </div>
-
-                                <div class="col-md-6 col-xs-12">
-                                    <td>{{ stageCourant.mission }}</td>
-                                </div>
+                <tbody>
+                    <tr>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                                <td><a href="{{path('prostages_stagesPourUneEntreprise', {idE:entreprise.id, idS:stageCourant.id})}}">{{ stageCourant.titre }}</a></td>
                             </div>
-                        </tr>
-                    </tbody>
-                {% endfor %}
+
+                            <div class="col-md-6 col-xs-12">
+                                <td>{{ stageCourant.mission }}</td>
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            {% else %}
+                <tbody>
+                    <tr>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                                <td>Pas de stage trouvé</td>
+                            </div>
+
+                            <div class="col-md-6 col-xs-12">
+                                <td>Pas de stage trouvé</td>
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
             {% endfor %}
         </table>
     </div>
