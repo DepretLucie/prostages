@@ -62,7 +62,7 @@ class ProstagesController extends AbstractController
     }
 
     /**
-     * @Route("/formation", name="prostages_formation")
+     * @Route("/formations", name="prostages_formation")
      */
     public function affFormation(FormationRepository $repositoryFormation): Response
     {
@@ -82,7 +82,7 @@ class ProstagesController extends AbstractController
     }
 
     /**
-     * @Route("/formation/{idF}/stages/{idS}", name="prostages_stagesPourUneFormation")
+     * @Route("/formation/{idF}/stage/{idS}", name="prostages_stagesPourUneFormation")
      */
     public function affStagePourUneFormation($idF, $idS): Response
     {

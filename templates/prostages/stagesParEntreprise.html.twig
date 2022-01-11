@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu %}
-
     <div class="example-wrapper">
         <h2 style="color: #080044; font-weight: bold;">Bienvenue sur la page comportant des stages liés à l'entreprise {{ entreprise.nom }}</h2>
         
@@ -29,20 +28,6 @@
 
                             <div class="col-md-6 col-xs-12">
                                 <td>{{ stageCourant.mission }}</td>
-                            </div>
-                        </div>
-                    </tr>
-                </tbody>
-            {% else %}
-                <tbody>
-                    <tr>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                <td>Pas de stage trouvé</td>
-                            </div>
-
-                            <div class="col-md-6 col-xs-12">
-                                <td>Pas de stage trouvé</td>
                             </div>
                         </div>
                     </tr>

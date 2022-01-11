@@ -25,23 +25,25 @@
             </thead>
 
             {% for entrepriseCourante in entreprises %}
-                <tbody>
-                    <tr>
-                        <div class="row">
-                            <div class="col-md-4 col-xs-12">
-                                <td><a href="{{path('prostages_stagesParEntreprise', {id:entrepriseCourante.id})}}">{{ entrepriseCourante.nom }}</a></td>
-                            </div>
+                {% if entrepriseCourante.stages|length != null %}
+                    <tbody>
+                        <tr>
+                            <div class="row">
+                                <div class="col-md-4 col-xs-12">
+                                    <td><a href="{{path('prostages_stagesParEntreprise', {id:entrepriseCourante.id})}}">{{ entrepriseCourante.nom }}</a></td>
+                                </div>
 
-                            <div class="col-md-4 col-xs-12">
-                                <td>{{ entrepriseCourante.adresse }}</td>
-                            </div>
+                                <div class="col-md-4 col-xs-12">
+                                    <td>{{ entrepriseCourante.adresse }}</td>
+                                </div>
 
-                            <div class="col-md-4 col-xs-12">
-                                <td>{{ entrepriseCourante.activite }}</td>
+                                <div class="col-md-4 col-xs-12">
+                                    <td>{{ entrepriseCourante.activite }}</td>
+                                </div>
                             </div>
-                        </div>
-                    </tr>
-                </tbody>
+                        </tr>
+                    </tbody>
+                {% endif %}
             {% endfor %}
         
         </table>
