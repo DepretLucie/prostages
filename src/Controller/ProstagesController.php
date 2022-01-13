@@ -49,11 +49,8 @@ class ProstagesController extends AbstractController
     /**
      * @Route("/entreprise/{idE}/stage/{idS}", name="prostages_stagesPourUneEntreprise")
      */
-    public function affStagePourUneEntreprise($idE, $idS): Response
+    public function affStagePourUneEntreprise(StageRepository $repositoryStage, $idS): Response
     {
-        // Récupérer le respository de l'entité Entreprise
-        $repositoryStage = $this->getDoctrine()->getRepository(Stage::class);
-
         // Récupérer les entreprises enregistrés en BD
         $unStage = $repositoryStage->find($idS);
 
@@ -84,11 +81,8 @@ class ProstagesController extends AbstractController
     /**
      * @Route("/formation/{idF}/stage/{idS}", name="prostages_stagesPourUneFormation")
      */
-    public function affStagePourUneFormation($idF, $idS): Response
+    public function affStagePourUneFormation(StageRepository $repositoryStage, $idS): Response
     {
-        // Récupérer le respository de l'entité Entreprise
-        $repositoryStage = $this->getDoctrine()->getRepository(Stage::class);
-
         // Récupérer les entreprises enregistrés en BD
         $unStage = $repositoryStage->find($idS);
 
